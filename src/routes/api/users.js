@@ -30,7 +30,7 @@
      function (req, res) {
          // list out all tenant login link from env for testing
          var currentDate = new Date();
-        var currentDateString = dateFormat(new Date(), "dd-mmm-yyyy HH:MM:ss");
+        var currentDateString = dateFormat(new Date(), "dd-mmm-yyyy HH:MM:ss"); // ensure GMT+0800 Singapore Time
          var sessionId = srs({ length: 20 });
          var url = "https://localhost:8111/api/users/login";
          var encodeTenantId = "";

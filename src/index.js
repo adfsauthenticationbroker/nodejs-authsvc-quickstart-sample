@@ -19,6 +19,11 @@ require('dotenv').config();
 /* Init express */
 const app = express();
 
+
+// Set timezone to asia/singapore GMT+0800
+process.env.TZ = 'Asia/Singapore'; 
+console.log("Current Server DateTime: " + (new Date).toString());  
+
 /* Here we setup the middlewares & configs */
 app.use(bodyParser.urlencoded({ extended: false }));
 
